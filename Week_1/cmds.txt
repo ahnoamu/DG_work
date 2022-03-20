@@ -1,0 +1,35 @@
+ 1077  git clone https://github.com/DataGlacier/VC.git
+ cd VC
+ 1084  git branch VC-branch
+ 1085  git checkout VC-branch
+
+ 1088  chmod a+x scripts/add.py  	#make the script executable first
+ 1090  python scripts/add.py 	#Input at the prompt your name and favourite sport
+ 
+ 1092  pytest test/test.py -s	#Input your name and ensure its in double quotes else error
+ 
+ 1093  git status			#Check modified files
+ 
+ 1094  git add .
+ 1096  git commit -m "response.json" 
+ 1097  git commit -m "./scripts/add.py"
+ 
+git checkout main		#Checkout back to the main branch
+git merge VC-branch 		#Merge chain changes made to the main 
+ 
+ 
+ #Before pushing
+ git remote set-url origin https://github.com/ahnoamu/DG_work.git 	#before pushing week1 folder to your own repo update the existing remote
+ git remote rename origin upstream                             #rename the origin repo to upstream
+ git remote add origin https://github.com/ahnoamu/DG_work.git  #add your own repo name
+
+ #To push 
+ cd ../../ 									# go back one directory
+ git init									#initialize week1 directory as a repo
+ git add -A ./      								# Add everything in VC
+ git commit -m "Adding Week 1 folder & making custom changes to VC"			#commit the changes
+ git remote add origin https://github.com/ahnoamu/DG_work.git
+ git push -u origin master             
+
+ 
+
