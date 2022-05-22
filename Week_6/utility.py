@@ -48,3 +48,4 @@ def col_header_val(df,table_config):
         logging.info(f'df columns: {df.columns}')
         logging.info(f'expected columns: {expected_col}')
         return 0            
+        
